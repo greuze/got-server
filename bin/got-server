@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+var app = require('../lib/got-server.js');
+
+app.start(function(err) {
+    if (err) {
+        console.error('Got Server could not start');
+    } else {
+        console.log('Got Server started');
+    }
+});

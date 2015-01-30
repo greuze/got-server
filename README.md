@@ -5,7 +5,7 @@ using these [rules](http://www.fantasyflightgames.com/ffg_content/agot-bg-2nd-ed
 
 To play the game, the user interface will also be required (not yet done).
 
-## API (could change without advice)
+## API (could change without notice)
 
 Create/join game
 ```
