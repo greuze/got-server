@@ -26,3 +26,23 @@ Execute order
 ```
 POST /games/<game_id>/orders/<order_id>
 ```
+
+Support in battle
+```
+PUT /games/<game_id>/order/<order_id>/support
+```
+
+Play card in battle
+```
+PUT /games/<game_id>/order/<order_id>/card
+```
+
+Use crow
+```
+POST /games/<game_id>/crow
+```
+
+Bet
+```
+POST /games/<game_id>/bet/<bet_id>
+```
