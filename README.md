@@ -37,6 +37,11 @@ Play card in battle
 PUT /games/<game_id>/order/<order_id>/card
 ```
 
+Muster
+```
+PUT /games/<game_id>/muster
+```
+
 Use crow
 ```
 POST /games/<game_id>/crow
@@ -44,5 +49,5 @@ POST /games/<game_id>/crow
 
 Bet
 ```
-POST /games/<game_id>/bet/<bet_id>
+PUT /games/<game_id>/bet/<bet_id>
 ```
