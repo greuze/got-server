@@ -1,0 +1,81 @@
+{
+    "name": "Westeros",
+    "zones": {
+        "castle-black": {
+            "type": "land",
+            "resources": [
+                "crown"
+            ],
+            "links": [
+                "bay-of-ice",
+                "winterfell",
+                "karhold",
+                "the-shivering-sea"
+            ]
+        },
+        "karhold": {
+            "type": "land",
+            "resources": [
+                "crown"
+            ],
+            "links": [
+                "castle-black",
+                "winterfell",
+                "the-shivering-sea"
+            ]
+        },
+        "winterfell": {
+            "type": "land",
+            "resources": [
+                "stronghold",
+                "crown",
+                "barrel",
+                "token"
+            ],
+            "links": [
+                "castle-black",
+                "karhold",
+                "the-shivering-sea",
+                "white-harbor",
+                "moat-cailin",
+                "bay-of-ice",
+                "the-stony-shore",
+                "winterfell-port"
+            ]
+        },
+        "the-stony-shore": {
+            "type": "land",
+            "resources": [
+                "barrel"
+            ],
+            "links": [
+                "winterfell",
+                "bay-of-ice"
+            ]
+        },
+        "white-harbor": {
+            "type": "land",
+            "resources": [
+                "castle"
+            ],
+            "links": [
+                "winterfell",
+                "the-shivering-sea",
+                "widows-watch",
+                "moat-cailin",
+                "white-harbor-port"
+            ]
+        },
+        "widows-watch": {
+            "type": "land",
+            "resources": [
+                "barrel"
+            ],
+            "links": [
+                "white-harbor",
+                "the-shivering-sea",
+                "the-narrow-sea"
+            ]
+        }
+    }
+}
