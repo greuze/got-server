@@ -30,7 +30,7 @@
                 "stronghold",
                 "crown",
                 "barrel",
-                "token"
+                "stark-token"
             ],
             "links": [
                 "castle-black",
@@ -75,6 +75,121 @@
                 "white-harbor",
                 "the-shivering-sea",
                 "the-narrow-sea"
+            ]
+        },
+        "moat-cailin": {
+            "type": "land",
+            "resources": [
+                "castle"
+            ],
+            "links": [
+                "winterfell",
+                "white-harbor",
+                "the-narrow-sea",
+                "the-twins",
+                "seaguard",
+                "greywater-watch"
+            ]
+        },
+        "greywater-watch": {
+            "type": "land",
+            "resources": [
+                "barrel"
+            ],
+            "links": [
+                "moat-cailin",
+                "seaguard",
+                "ironmans-bay",
+                "flints-finger"
+            ]
+        },
+        "flints-finger": {
+            "type": "land",
+            "resources": [
+                "barrel"
+            ],
+            "links": [
+                "bay-of-ice",
+                "greywater-watch",
+                "ironmans-bay",
+                "sunset-sea"
+            ]
+        },
+        "seaguard": {
+            "type": "land",
+            "resources": [
+                "barrel",
+                "crown",
+                "stronghold"
+            ],
+            "links": [
+                "greywater-watch",
+                "moat-cailin",
+                "the-twins",
+                "riverrun",
+                "ironmans-bay"
+            ]
+        },
+        "the-twins": {
+            "type": "land",
+            "resources": [
+                "crown"
+            ],
+            "links": [
+                "moat-cailin",
+                "the-narrow-sea",
+                "the-fingers",
+                "the-mountains-of-the-moon",
+                "seaguard"
+            ]
+        },
+        "the-fingers": {
+            "type": "land",
+            "resources": [
+                "barrel"
+            ],
+            "links": [
+                "the-twins",
+                "the-narrow-sea",
+                "the-mountains-of-the-moon"
+            ]
+        },
+        "the-mountains-of-the-moon": {
+            "type": "land",
+            "resources": [
+                "barrel"
+            ],
+            "links": [
+                "the-twins",
+                "the-fingers",
+                "the-narrow-sea",
+                "the-eyrie",
+                "cracklaw-point"
+            ]
+        },
+        "the-eyrie": {
+            "type": "land",
+            "resources": [
+                "barrel",
+                "crown",
+                "castle"
+            ],
+            "links": [
+                "the-mountains-of-the-moon",
+                "the-narrow-sea"
+            ]
+        },
+        "pyke": {
+            "type": "land",
+            "resources": [
+                "barrel",
+                "crown",
+                "stronghold",
+                "greyjoy-token"
+            ],
+            "links": [
+                "ironmans-bay",
+                "pyke-port"
             ]
         }
     }

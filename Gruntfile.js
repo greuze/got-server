@@ -240,8 +240,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-mkdir');
     grunt.loadNpmTasks('grunt-githooks');
 
-    grunt.loadTasks('tools/tasks');
-
     grunt.registerTask('init-pages', ['exec:githubPagesInit']);
 
     grunt.registerTask('test', 'Run tests', ['mochaTest:unit']);
