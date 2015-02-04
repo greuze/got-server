@@ -17,8 +17,9 @@ describe('Westeros map is correct', function() {
         var zones = westeros.zones;
         for (var zone in zones) {
             zones[zone].links.forEach(function (linked) {
-                chai.expect(zones[linked]).not.to.equal(undefined, linked + ' does not exist');
-                chai.expect(zones[linked].links.indexOf(zone)).not.to.equal(-1);
+                chai.assert(zones[linked], linked + ' does not exist');
+                chai.assert(zones[linked].links.indexOf(zone) !== -1,
+                    'A link ' + zone + ' -> ' + linked + ' exists, but not the reverse');
             });
         }
 
@@ -36,7 +37,7 @@ describe('Westeros map is correct', function() {
                     case 'castle':
                     case 'stark-token':
                     case 'lannister-token':
-                    case 'tyrrel-token':
+                    case 'tyrell-token':
                     case 'greyjoy-token':
                     case 'baratheon-token':
                     case 'martell-token':

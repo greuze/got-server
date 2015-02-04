@@ -62,6 +62,7 @@
                 "winterfell",
                 "the-shivering-sea",
                 "widows-watch",
+                "the-narrow-sea",
                 "moat-cailin",
                 "white-harbor-port"
             ]
@@ -97,6 +98,7 @@
                 "barrel"
             ],
             "links": [
+                "bay-of-ice",
                 "moat-cailin",
                 "seaguard",
                 "ironmans-bay",
@@ -164,7 +166,7 @@
                 "the-fingers",
                 "the-narrow-sea",
                 "the-eyrie",
-                "cracklaw-point"
+                "crackclaw-point"
             ]
         },
         "the-eyrie": {
@@ -190,6 +192,554 @@
             "links": [
                 "ironmans-bay",
                 "pyke-port"
+            ]
+        },
+        "dragonstone": {
+            "type": "land",
+            "resources": [
+                "barrel",
+                "crown",
+                "stronghold",
+                "baratheon-token"
+            ],
+            "links": [
+                "shipbreaker-bay",
+                "dragonstone-port"
+            ]
+        },
+        "riverrun": {
+            "type": "land",
+            "resources": [
+                "barrel",
+                "crown",
+                "stronghold"
+            ],
+            "links": [
+                "seaguard",
+                "harrenhal",
+                "stoney-sept",
+                "lannisport",
+                "the-golden-sound",
+                "ironmans-bay"
+            ]
+        },
+        "lannisport": {
+            "type": "land",
+            "resources": [
+                "barrel",
+                "barrel",
+                "stronghold",
+                "lannister-token"
+            ],
+            "links": [
+                "riverrun",
+                "stoney-sept",
+                "searoad-marches",
+                "the-golden-sound",
+                "lannisport-port"
+            ]
+        },
+        "harrenhal": {
+            "type": "land",
+            "resources": [
+                "crown",
+                "castle"
+            ],
+            "links": [
+                "riverrun",
+                "crackclaw-point",
+                "blackwater",
+                "stoney-sept"
+            ]
+        },
+        "stoney-sept": {
+            "type": "land",
+            "resources": [
+                "crown"
+            ],
+            "links": [
+                "riverrun",
+                "harrenhal",
+                "blackwater",
+                "searoad-marches",
+                "lannisport"
+            ]
+        },
+        "crackclaw-point": {
+            "type": "land",
+            "resources": [
+                "castle"
+            ],
+            "links": [
+                "the-mountains-of-the-moon",
+                "the-narrow-sea",
+                "shipbreaker-bay",
+                "blackwater-bay",
+                "kings-landing",
+                "blackwater",
+                "harrenhal"
+            ]
+        },
+        "blackwater": {
+            "type": "land",
+            "resources": [
+                "barrel",
+                "barrel"
+            ],
+            "links": [
+                "stoney-sept",
+                "harrenhal",
+                "crackclaw-point",
+                "kings-landing",
+                "the-reach",
+                "searoad-marches"
+            ]
+        },
+        "kings-landing": {
+            "type": "land",
+            "resources": [
+                "crown",
+                "crown",
+                "stronghold"
+            ],
+            "links": [
+                "crackclaw-point",
+                "blackwater-bay",
+                "kingswood",
+                "the-reach",
+                "blackwater"
+            ]
+        },
+        "searoad-marches": {
+            "type": "land",
+            "resources": [
+                "barrel"
+            ],
+            "links": [
+                "lannisport",
+                "stoney-sept",
+                "blackwater",
+                "the-reach",
+                "highgarden",
+                "west-summer-sea",
+                "sunset-sea",
+                "the-golden-sound"
+            ]
+        },
+        "the-reach": {
+            "type": "land",
+            "resources": [
+                "castle"
+            ],
+            "links": [
+                "blackwater",
+                "kings-landing",
+                "kingswood",
+                "the-boneway",
+                "dornish-marches",
+                "highgarden",
+                "searoad-marches"
+            ]
+        },
+        "kingswood": {
+            "type": "land",
+            "resources": [
+                "barrel",
+                "crown"
+            ],
+            "links": [
+                "kings-landing",
+                "blackwater-bay",
+                "shipbreaker-bay",
+                "storms-end",
+                "the-boneway",
+                "the-reach"
+            ]
+        },
+        "highgarden": {
+            "type": "land",
+            "resources": [
+                "barrel",
+                "barrel",
+                "stronghold",
+                "tyrell-token"
+            ],
+            "links": [
+                "searoad-marches",
+                "the-reach",
+                "dornish-marches",
+                "oldtown",
+                "west-summer-sea",
+                "redwyne-straights"
+            ]
+        },
+        "storms-end": {
+            "type": "land",
+            "resources": [
+                "castle"
+            ],
+            "links": [
+                "kingswood",
+                "shipbreaker-bay",
+                "east-summer-sea",
+                "sea-of-dorne",
+                "the-boneway",
+                "storms-end-port"
+            ]
+        },
+        "oldtown": {
+            "type": "land",
+            "resources": [
+                "stronghold"
+            ],
+            "links": [
+                "highgarden",
+                "dornish-marches",
+                "three-towers",
+                "redwyne-straights",
+                "oldtown-port"
+            ]
+        },
+        "dornish-marches": {
+            "type": "land",
+            "resources": [
+                "crown"
+            ],
+            "links": [
+                "the-reach",
+                "the-boneway",
+                "princes-pass",
+                "three-towers",
+                "oldtown",
+                "highgarden"
+            ]
+        },
+        "the-boneway": {
+            "type": "land",
+            "resources": [
+                "crown"
+            ],
+            "links": [
+                "kingswood",
+                "storms-end",
+                "sea-of-dorne",
+                "yronwood",
+                "princes-pass",
+                "dornish-marches",
+                "the-reach"
+            ]
+        },
+        "princes-pass": {
+            "type": "land",
+            "resources": [
+                "barrel",
+                "crown"
+            ],
+            "links": [
+                "dornish-marches",
+                "the-boneway",
+                "yronwood",
+                "starfall",
+                "three-towers"
+            ]
+        },
+        "three-towers": {
+            "type": "land",
+            "resources": [
+                "barrel"
+            ],
+            "links": [
+                "dornish-marches",
+                "princes-pass",
+                "west-summer-sea",
+                "redwyne-straights",
+                "oldtown"
+            ]
+        },
+        "starfall": {
+            "type": "land",
+            "resources": [
+                "barrel",
+                "castle"
+            ],
+            "links": [
+                "princes-pass",
+                "yronwood",
+                "salt-shore",
+                "east-summer-sea",
+                "west-summer-sea"
+            ]
+        },
+        "yronwood": {
+            "type": "land",
+            "resources": [
+                "castle"
+            ],
+            "links": [
+                "the-boneway",
+                "sea-of-dorne",
+                "sunspear",
+                "salt-shore",
+                "starfall",
+                "princes-pass"
+            ]
+        },
+        "salt-shore": {
+            "type": "land",
+            "resources": [
+                "barrel"
+            ],
+            "links": [
+                "yronwood",
+                "sunspear",
+                "east-summer-sea",
+                "starfall"
+            ]
+        },
+        "sunspear": {
+            "type": "land",
+            "resources": [
+                "barrel",
+                "crown",
+                "stronghold",
+                "martell-token"
+            ],
+            "links": [
+                "sea-of-dorne",
+                "east-summer-sea",
+                "salt-shore",
+                "yronwood",
+                "sunspear-port"
+            ]
+        },
+        "the-arbor": {
+            "type": "land",
+            "resources": [
+                "crown"
+            ],
+            "links": [
+                "redwyne-straights",
+                "west-summer-sea"
+            ]
+        },
+        "bay-of-ice": {
+            "type": "sea",
+            "resources": [],
+            "links": [
+                "castle-black",
+                "winterfell",
+                "winterfell-port",
+                "the-stony-shore",
+                "greywater-watch",
+                "flints-finger",
+                "sunset-sea"
+            ]
+        },
+        "sunset-sea": {
+            "type": "sea",
+            "resources": [],
+            "links": [
+                "bay-of-ice",
+                "flints-finger",
+                "ironmans-bay",
+                "the-golden-sound",
+                "searoad-marches",
+                "west-summer-sea"
+            ]
+        },
+        "ironmans-bay": {
+            "type": "sea",
+            "resources": [],
+            "links": [
+                "flints-finger",
+                "greywater-watch",
+                "seaguard",
+                "riverrun",
+                "the-golden-sound",
+                "sunset-sea",
+                "pyke",
+                "pyke-port"
+            ]
+        },
+        "the-golden-sound": {
+            "type": "sea",
+            "resources": [],
+            "links": [
+                "ironmans-bay",
+                "riverrun",
+                "lannisport",
+                "lannisport-port",
+                "searoad-marches",
+                "sunset-sea"
+            ]
+        },
+        "west-summer-sea": {
+            "type": "sea",
+            "resources": [],
+            "links": [
+                "sunset-sea",
+                "searoad-marches",
+                "highgarden",
+                "redwyne-straights",
+                "three-towers",
+                "starfall",
+                "east-summer-sea",
+                "the-arbor"
+            ]
+        },
+        "redwyne-straights": {
+            "type": "sea",
+            "resources": [],
+            "links": [
+                "highgarden",
+                "oldtown",
+                "oldtown-port",
+                "three-towers",
+                "west-summer-sea",
+                "the-arbor"
+            ]
+        },
+        "east-summer-sea": {
+            "type": "sea",
+            "resources": [],
+            "links": [
+                "west-summer-sea",
+                "starfall",
+                "salt-shore",
+                "sunspear",
+                "sunspear-port",
+                "sea-of-dorne",
+                "storms-end",
+                "shipbreaker-bay"
+            ]
+        },
+        "sea-of-dorne": {
+            "type": "sea",
+            "resources": [],
+            "links": [
+                "the-boneway",
+                "storms-end",
+                "east-summer-sea",
+                "sunspear",
+                "yronwood"
+            ]
+        },
+        "shipbreaker-bay": {
+            "type": "sea",
+            "resources": [],
+            "links": [
+                "the-narrow-sea",
+                "east-summer-sea",
+                "storms-end",
+                "storms-end-port",
+                "kingswood",
+                "blackwater-bay",
+                "crackclaw-point",
+                "dragonstone",
+                "dragonstone-port"
+            ]
+        },
+        "blackwater-bay": {
+            "type": "sea",
+            "resources": [],
+            "links": [
+                "crackclaw-point",
+                "shipbreaker-bay",
+                "kingswood",
+                "kings-landing"
+            ]
+        },
+        "the-narrow-sea": {
+            "type": "sea",
+            "resources": [],
+            "links": [
+                "the-shivering-sea",
+                "shipbreaker-bay",
+                "crackclaw-point",
+                "the-mountains-of-the-moon",
+                "the-eyrie",
+                "the-fingers",
+                "the-twins",
+                "moat-cailin",
+                "white-harbor",
+                "white-harbor-port",
+                "widows-watch"
+            ]
+        },
+        "the-shivering-sea": {
+            "type": "sea",
+            "resources": [],
+            "links": [
+                "the-narrow-sea",
+                "widows-watch",
+                "white-harbor",
+                "winterfell",
+                "karhold",
+                "castle-black"
+            ]
+        },
+        "winterfell-port": {
+            "type": "port",
+            "resources": [],
+            "links": [
+                "winterfell",
+                "bay-of-ice"
+            ]
+        },
+        "white-harbor-port": {
+            "type": "port",
+            "resources": [],
+            "links": [
+                "white-harbor",
+                "the-narrow-sea"
+            ]
+        },
+        "pyke-port": {
+            "type": "port",
+            "resources": [],
+            "links": [
+                "pyke",
+                "ironmans-bay"
+            ]
+        },
+        "lannisport-port": {
+            "type": "port",
+            "resources": [],
+            "links": [
+                "lannisport",
+                "the-golden-sound"
+            ]
+        },
+        "dragonstone-port": {
+            "type": "port",
+            "resources": [],
+            "links": [
+                "dragonstone",
+                "shipbreaker-bay"
+            ]
+        },
+        "storms-end-port": {
+            "type": "port",
+            "resources": [],
+            "links": [
+                "storms-end",
+                "shipbreaker-bay"
+            ]
+        },
+        "oldtown-port": {
+            "type": "port",
+            "resources": [],
+            "links": [
+                "oldtown",
+                "redwyne-straights"
+            ]
+        },
+        "sunspear-port": {
+            "type": "port",
+            "resources": [],
+            "links": [
+                "sunspear",
+                "east-summer-sea"
             ]
         }
     }
