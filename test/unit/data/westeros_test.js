@@ -29,23 +29,25 @@ describe('Westeros map is correct', function() {
     it('Every zone have valid resources (only land)', function(done) {
         var zones = westeros.zones;
         for (var zone in zones) {
-            zones[zone].resources.forEach(function (resource) {
-                switch (resource) {
-                    case 'barrel':
-                    case 'crown':
-                    case 'stronghold':
-                    case 'castle':
-                    case 'stark-token':
-                    case 'lannister-token':
-                    case 'tyrell-token':
-                    case 'greyjoy-token':
-                    case 'baratheon-token':
-                    case 'martell-token':
-                        break;
-                    default:
-                        chai.assert(false, 'Resource ' + resource + ' is not valid');
-                }
-            });
+            if (zones[zone].resources) {
+                zones[zone].resources.forEach(function (resource) {
+                    switch (resource) {
+                        case 'barrel':
+                        case 'crown':
+                        case 'stronghold':
+                        case 'castle':
+                        case 'stark-token':
+                        case 'lannister-token':
+                        case 'tyrell-token':
+                        case 'greyjoy-token':
+                        case 'baratheon-token':
+                        case 'martell-token':
+                            break;
+                        default:
+                            chai.assert(false, 'Resource ' + resource + ' is not valid');
+                    }
+                });
+            }
         }
 
         done();

@@ -1,0 +1,102 @@
+{
+    "stark": [
+        {
+            "zone": "winterfell",
+            "garrison": 1,
+            "knights": 1,
+            "footmen": 1
+        },
+        {
+            "zone": "white-harbor",
+            "footmen": 1
+        },
+        {
+            "zone": "the-shivering-sea",
+            "ships": 1
+        }
+    ],
+    "baratheon": [
+        {
+            "zone": "dragonstone",
+            "garrison": 1,
+            "knights": 1,
+            "footmen": 1
+        },
+        {
+            "zone": "kingswood",
+            "footmen": 1
+        },
+        {
+            "zone": "shipbreaker-bay",
+            "ships": 2
+        }
+    ],
+    "lannister": [
+        {
+            "zone": "lannisport",
+            "garrison": 1,
+            "knights": 1,
+            "footmen": 1
+        },
+        {
+            "zone": "stoney-sept",
+            "footmen": 1
+        },
+        {
+            "zone": "the-golden-sound",
+            "ships": 1
+        }
+    ],
+    "greyjoy": [
+        {
+            "zone": "pyke",
+            "garrison": 1,
+            "knights": 1,
+            "footmen": 1
+        },
+        {
+            "zone": "greywater-watch",
+            "footmen": 1
+        },
+        {
+            "zone": "ironmans-bay",
+            "ships": 1
+        },
+        {
+            "zone": "pyke-port",
+            "ships": 1
+        }
+    ],
+    "tyrell": [
+        {
+            "zone": "highgarden",
+            "garrison": 1,
+            "knights": 1,
+            "footmen": 1
+        },
+        {
+            "zone": "dornish-marches",
+            "footmen": 1
+        },
+        {
+            "zone": "redwyne-straights",
+            "ships": 1
+        }
+    ],
+    "martell": [
+        {
+            "zone": "sunspear",
+            "garrison": 1,
+            "knights": 1,
+            "footmen": 1
+        },
+        {
+            "zone": "salt-shore",
+            "footmen": 1
+        },
+        {
+            "zone": "sea-of-dorne",
+            "ships": 1
+        }
+    ]
+}

@@ -524,7 +524,6 @@
         },
         "bay-of-ice": {
             "type": "sea",
-            "resources": [],
             "links": [
                 "castle-black",
                 "winterfell",
@@ -537,7 +536,6 @@
         },
         "sunset-sea": {
             "type": "sea",
-            "resources": [],
             "links": [
                 "bay-of-ice",
                 "flints-finger",
@@ -549,7 +547,6 @@
         },
         "ironmans-bay": {
             "type": "sea",
-            "resources": [],
             "links": [
                 "flints-finger",
                 "greywater-watch",
@@ -563,7 +560,6 @@
         },
         "the-golden-sound": {
             "type": "sea",
-            "resources": [],
             "links": [
                 "ironmans-bay",
                 "riverrun",
@@ -575,7 +571,6 @@
         },
         "west-summer-sea": {
             "type": "sea",
-            "resources": [],
             "links": [
                 "sunset-sea",
                 "searoad-marches",
@@ -589,7 +584,6 @@
         },
         "redwyne-straights": {
             "type": "sea",
-            "resources": [],
             "links": [
                 "highgarden",
                 "oldtown",
@@ -601,7 +595,6 @@
         },
         "east-summer-sea": {
             "type": "sea",
-            "resources": [],
             "links": [
                 "west-summer-sea",
                 "starfall",
@@ -615,7 +608,6 @@
         },
         "sea-of-dorne": {
             "type": "sea",
-            "resources": [],
             "links": [
                 "the-boneway",
                 "storms-end",
@@ -626,7 +618,6 @@
         },
         "shipbreaker-bay": {
             "type": "sea",
-            "resources": [],
             "links": [
                 "the-narrow-sea",
                 "east-summer-sea",
@@ -641,7 +632,6 @@
         },
         "blackwater-bay": {
             "type": "sea",
-            "resources": [],
             "links": [
                 "crackclaw-point",
                 "shipbreaker-bay",
@@ -651,7 +641,6 @@
         },
         "the-narrow-sea": {
             "type": "sea",
-            "resources": [],
             "links": [
                 "the-shivering-sea",
                 "shipbreaker-bay",
@@ -668,7 +657,6 @@
         },
         "the-shivering-sea": {
             "type": "sea",
-            "resources": [],
             "links": [
                 "the-narrow-sea",
                 "widows-watch",
@@ -680,7 +668,6 @@
         },
         "winterfell-port": {
             "type": "port",
-            "resources": [],
             "links": [
                 "winterfell",
                 "bay-of-ice"
@@ -688,7 +675,6 @@
         },
         "white-harbor-port": {
             "type": "port",
-            "resources": [],
             "links": [
                 "white-harbor",
                 "the-narrow-sea"
@@ -696,7 +682,6 @@
         },
         "pyke-port": {
             "type": "port",
-            "resources": [],
             "links": [
                 "pyke",
                 "ironmans-bay"
@@ -704,7 +689,6 @@
         },
         "lannisport-port": {
             "type": "port",
-            "resources": [],
             "links": [
                 "lannisport",
                 "the-golden-sound"
@@ -712,7 +696,6 @@
         },
         "dragonstone-port": {
             "type": "port",
-            "resources": [],
             "links": [
                 "dragonstone",
                 "shipbreaker-bay"
@@ -720,7 +703,6 @@
         },
         "storms-end-port": {
             "type": "port",
-            "resources": [],
             "links": [
                 "storms-end",
                 "shipbreaker-bay"
@@ -728,7 +710,6 @@
         },
         "oldtown-port": {
             "type": "port",
-            "resources": [],
             "links": [
                 "oldtown",
                 "redwyne-straights"
@@ -736,7 +717,6 @@
         },
         "sunspear-port": {
             "type": "port",
-            "resources": [],
             "links": [
                 "sunspear",
                 "east-summer-sea"
