@@ -1,0 +1,56 @@
+[
+    {
+        "name": "A King Beyond the Wall",
+        "lowestOnDefeat": "Moves his tokens to the lowest position of every Influence track.",
+        "othersOnDefeat": "In turn order, each player chooses either the Fiefdoms or King's Court Influence track and moves his token to the lowest position of that track.",
+        "highestOnVictory": "Moves his token to the top of one Influence track of his choice, then takes the appropriate Dominance token."
+    },
+    {
+        "name": "Crow Killers",
+        "lowestOnDefeat": "Replaces all of his Knights with available Footmen. Any Knight unable to be replaced is destroyed.",
+        "othersOnDefeat": "Replaces 2 of their Knights with available Footmen. Any Knight unable to be replaced is destroyed.",
+        "highestOnVictory": "May immediately replace up to 2 of his Footmen, anywhere, with available Knights."
+    },
+    {
+        "name": "Mammoth Riders",
+        "lowestOnDefeat": "Destroys 3 of his units anywhere.",
+        "othersOnDefeat": "Destroys 2 of their units anywhere.",
+        "highestOnVictory": "May retrieve 1 House card of his choice from his House card discard pile."
+    },
+    {
+        "name": "Massing on the Milkwater",
+        "lowestOnDefeat": "If he has more than one House card in his hand, he discards all cards with the highest combat strength.",
+        "othersOnDefeat": "If they have more than one House card in their hand, they must choose and discard one of those cards.",
+        "highestOnVictory": "Returns his entire House card discard pile into his hand."
+    },
+    {
+        "name": "Preemptive Raid",
+        "lowestOnDefeat": "Choose one of the following: A. Destroys 2 of his units anywhere. B. Is reduced 2 positions on his highest Influence track.",
+        "othersOnDefeat": "Nothing happens.",
+        "highestOnVictory": "The wildlings immediately attack again with a strength of 6. You do not participate in the bidding against this attack. (nor do you receive any rewards or penalties)"
+    },
+    {
+        "name": "Rattleshirt's Raiders",
+        "lowestOnDefeat": "Is reduced 2 positions on the Supply track (to no lower than 0).",
+        "othersOnDefeat": "Is reduced 1 position on the Supply track (to no lower than 0). Then reconcile armies to their new supply limits.",
+        "highestOnVictory": "Is increased 1 position on the Supply track (to no higher than 6)."
+    },
+    {
+        "name": "Silence at the Wall",
+        "lowestOnDefeat": "Nothing happens.",
+        "othersOnDefeat": "Nothing happens.",
+        "highestOnVictory": "Nothing happens."
+    },
+    {
+        "name": "Skinchanger Scout",
+        "lowestOnDefeat": "Discards all available Power tokens.",
+        "othersOnDefeat": "Discards 2 available Power tokens, or as many as they are able.",
+        "highestOnVictory": "All Power tokens he bid on this attack are immediately returned to his available Power."
+    },
+    {
+        "name": "The Horde Descends",
+        "lowestOnDefeat": "Destroys 2 of his units at one of his Castles or Strongholds. If unable, he destroys 2 of his units anywhere.",
+        "othersOnDefeat": "Destroys 1 of their units anywhere.",
+        "highestOnVictory": "May muster forces (following normal mustering rules) in any one Castle or Stronghold area he controls."
+    }
+]

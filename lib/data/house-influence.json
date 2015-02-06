@@ -1,0 +1,32 @@
+{
+    "stark": {
+        "ironThroneTrack": 3,
+        "fiefdomsTrack": 4,
+        "kingsCourtTrack": 2
+    },
+    "lannister": {
+        "ironThroneTrack": 2,
+        "fiefdomsTrack": 6,
+        "kingsCourtTrack": 1
+    },
+    "baratheon": {
+        "ironThroneTrack": 1,
+        "fiefdomsTrack": 5,
+        "kingsCourtTrack": 4
+    },
+    "greyjoy": {
+        "ironThroneTrack": 5,
+        "fiefdomsTrack": 1,
+        "kingsCourtTrack": 6
+    },
+    "tyrell": {
+        "ironThroneTrack": 6,
+        "fiefdomsTrack": 2,
+        "kingsCourtTrack": 5
+    },
+    "martell": {
+        "ironThroneTrack": 4,
+        "fiefdomsTrack": 3,
+        "kingsCourtTrack": 3
+    }
+}
