@@ -8,12 +8,9 @@ describe('Service game is correct (3 players)', function() {
     var game;
     var p1, p2, p3;
 
+    // Must create a full game, to let other tests run properly
     before(function(done) {
-        game = require('../../../lib/service/game.js');
-
-        // Reset games lists
-//        game.openGames = [];
-//        game.runningGames = {};
+        game = require('../../../lib/service/game-service.js');
 
         game.createGame({maxPlayers: 3}, function(error, player) {
             p1 = player;
@@ -84,11 +81,11 @@ describe('Service game is correct (3 players)', function() {
 
     it('Initial settings are correct', function(done) {
         // Get full game from internal object
-        var myGame = game._getAllGames().running[p1.gameId];
+        var myGame = game._getFullGame(p1.gameId);
 
         chai.assert.equal(myGame.wildlingsForce, 2, 'Wildlings force is not correct');
-        chai.assert.equal(myGame.turn, 1, 'Turn is not correct');
-        chai.assert.equal(myGame.phase, 'PLANIFICATION', 'Phase is not correct');
+        chai.assert.equal(myGame.period.turn, 1, 'Turn is not correct');
+        chai.assert.equal(myGame.period.phase, 'PLANIFICATION', 'Phase is not correct');
 
         chai.assert.equal(myGame.influenceTracks.ironThrone[0], 'baratheon', 'One influence tracks is not correct');
         chai.assert.equal(myGame.influenceTracks.ironThrone[1], 'lannister', 'One influence tracks is not correct');
