@@ -109,40 +109,40 @@ describe('Period game is correct (4 players)', function() {
         // Initial period
         checkPeriod(myGame.period, 1, 'PLANIFICATION', 4, true);
 
-        game.nextPeriod(myGame);
+        myGame.nextPeriod();
         checkPeriod(myGame.period, 1, 'SHOW_ORDERS', 0, false);
 
-        game.nextPeriod(myGame);
+        myGame.nextPeriod();
         checkPeriod(myGame.period, 1, 'USE_CROW', 1, false);
 
-        game.nextPeriod(myGame);
+        myGame.nextPeriod();
         checkPeriod(myGame.period, 1, 'EXECUTE_RAID_ORDERS', 4, false);
 
-        game.nextPeriod(myGame);
+        myGame.nextPeriod();
         checkPeriod(myGame.period, 1, 'EXECUTE_MARCH_ORDERS', 4, false);
 
-        game.nextPeriod(myGame);
+        myGame.nextPeriod();
         checkPeriod(myGame.period, 1, 'EXECUTE_CROWN_ORDERS', 4, false);
 
-        game.nextPeriod(myGame);
+        myGame.nextPeriod();
         checkPeriod(myGame.period, 1, 'FINISH_TURN', 0, false);
 
-        game.nextPeriod(myGame);
+        myGame.nextPeriod();
         checkPeriod(myGame.period, 2, 'DRAW_WESTEROS_CARDS', 0, false);
 
-        game.nextPeriod(myGame);
+        myGame.nextPeriod();
         checkPeriod(myGame.period, 2, 'WILDLINGS_ATTACK', 4, false);
 
-        game.nextPeriod(myGame);
+        myGame.nextPeriod();
         checkPeriod(myGame.period, 2, 'RESOLVE_WESTEROS_I', 4, true);
 
-        game.nextPeriod(myGame);
+        myGame.nextPeriod();
         checkPeriod(myGame.period, 2, 'RESOLVE_WESTEROS_II', 4, true);
 
-        game.nextPeriod(myGame);
+        myGame.nextPeriod();
         checkPeriod(myGame.period, 2, 'RESOLVE_WESTEROS_III', 4, true);
 
-        game.nextPeriod(myGame);
+        myGame.nextPeriod();
         checkPeriod(myGame.period, 2, 'PLANIFICATION', 4, true);
 
         done();

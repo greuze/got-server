@@ -14,6 +14,72 @@ describe('Common test', function() {
         done();
     });
 
+    // maxDeviation is in percentage
+    function checkShuffleStatistics(iterations, arrayLength, maxDeviation) {
+        var expectedAverage = iterations / arrayLength;
+
+        var results = [];
+        // Fill the results matrix with zeroes
+        for (var a = 0; a < arrayLength; a++) {
+            var line = [];
+            for (var b = 0; b < arrayLength; b++) {
+                line[b] = 0;
+            }
+            results[a] = line;
+        }
+        // Iterate shuffle to see if results are statistically simillars
+        for (var i = 0; i < iterations; i++) {
+            var arr = [];
+            // Fill array to shuffle with sorted numbers
+            for (var e = 0; e < arrayLength; e++) {
+                arr[e] = e;
+            }
+
+            common.shuffle(arr);
+
+            // Add one to the final position of every element
+            for (var j = 0; j < arr.length; j++) {
+                results[j][arr.indexOf(j)] += 1;
+            }
+        }
+
+        // Check the results
+        for (var k = 0; k < arrayLength; k++) {
+            results[k].forEach(function(value){
+                // Percentage of deviation
+                var deviation = 100 * Math.abs(value - expectedAverage) / expectedAverage;
+                chai.expect(deviation).to.be.below(maxDeviation, 'Deviation is bigger than maximum allowed');
+            });
+        }
+    }
+
+    it('Shuffle statistics (10,000)', function(done) {
+        // Statistics could take some time...
+        this.timeout(0);
+
+        checkShuffleStatistics(10000, 10, 15);
+
+        done();
+    });
+
+    it('Shuffle statistics (50,000)', function(done) {
+        // Statistics could take some time...
+        this.timeout(0);
+
+        checkShuffleStatistics(50000, 10, 7);
+
+        done();
+    });
+
+    it('Shuffle statistics (1,000,000)', function(done) {
+        // Statistics could take some time...
+        this.timeout(0);
+
+        checkShuffleStatistics(1000000, 10, 2);
+
+        done();
+    });
+
     it('Get playing houses', function(done) {
         chai.assert(common.getPlayingHouses(3).length, 3, 'Get playing houses with size 3 is not correct');
         chai.assert(common.getPlayingHouses(4).length, 4, 'Get playing houses with size 3 is not correct');
