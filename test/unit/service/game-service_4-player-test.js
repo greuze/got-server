@@ -5,13 +5,14 @@ var chai = require ('chai');
 /*jshint loopfunc:true */
 describe('Period game is correct (4 players)', function() {
 
-    var gameService, game;
+    var gameService, game, storage;
     var p1, p2, p3, p4;
 
     // Must create a full game, to let other tests run properly
     before(function(done) {
         gameService = require('../../../lib/service/game-service.js');
         game = require('../../../lib/service/game.js');
+        storage = require('../../../lib/service/game-storage.js');
 
         gameService.createGame({maxPlayers: 4}, function(error, player) {
             p1 = player;
@@ -103,7 +104,7 @@ describe('Period game is correct (4 players)', function() {
 
     it('Next period is correct', function(done) {
         // Get full game from internal object
-        var myGame = gameService._getFullGame(p1.gameId);
+        var myGame = storage.getRunningGame(p1.gameId);
 
         // Initial period
         checkPeriod(myGame.period, 1, 'PLANIFICATION', 4, true);
