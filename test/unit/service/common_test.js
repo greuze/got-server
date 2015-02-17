@@ -71,11 +71,11 @@ describe('Common test', function() {
         done();
     });
 
-    it('Shuffle statistics (1,000,000)', function(done) {
+    it('Shuffle statistics (250,000)', function(done) {
         // Statistics could take some time...
         this.timeout(0);
 
-        checkShuffleStatistics(1000000, 10, 2);
+        checkShuffleStatistics(250000, 10, 3);
 
         done();
     });
