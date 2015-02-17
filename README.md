@@ -7,47 +7,81 @@ To play the game, the user interface will also be required (not yet done).
 
 ## API (could change without notice)
 
-Create/join game
+### Create/join game
 ```
 POST /games
 ```
+Headers:
+```
+content-type: application/json
+```
+Body:
+```
+{
+  "maxPlayers": "<number_of_players>"
+}
+```
+Response example:
+```
+HTTP/1.1 202 Accepted
+{
+  "gameId": "a59d0ad5-0069-4ae6-874e-d33b4f74674c",
+  "playerId": "516ccdd7-bada-4278-981b-8bc6a0e89df3",
+  "playerHouse":"baratheon",
+  "pendingPlayers": 2
+}
+```
 
-Get info about the game
+### Get info about the game
 ```
 GET /games/<game_id>
 ```
+Headers:
+```
+player-id: <player_id>
+```
+Response example:
+```
+HTTP/1.1 200 OK
+{
+  "gameId":"a59d0ad5-0069-4ae6-874e-d33b4f74674c",
+  "playerId":"516ccdd7-bada-4278-981b-8bc6a0e89df3",
+  "playerHouse":"baratheon",
+  "status":"running"
+}
+```
 
-Place orders
+### Place orders
 ```
 PUT /games/<game_id>/orders
 ```
 
-Execute order
+### Execute order
 ```
 POST /games/<game_id>/orders/<order_id>
 ```
 
-Support in battle
+### Support in battle
 ```
 PUT /games/<game_id>/order/<order_id>/support
 ```
 
-Play card in battle
+### Play card in battle
 ```
 PUT /games/<game_id>/order/<order_id>/card
 ```
 
-Muster
+### Muster
 ```
 PUT /games/<game_id>/muster
 ```
 
-Use crow
+### Use crow
 ```
 POST /games/<game_id>/crow
 ```
 
-Bet
+### Bet
 ```
 PUT /games/<game_id>/bet/<bet_id>
 ```
