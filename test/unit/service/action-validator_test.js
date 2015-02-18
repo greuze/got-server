@@ -67,6 +67,27 @@ describe('Action validator (3 players)', function() {
         done();
     });
 
+    it('Can place less orders than available (Stark)', function(done) {
+        var myGame = storage.getRunningGame(p1.gameId);
+        var orders = [
+            {
+                zone: 'winterfell',
+                order: 'CROWN*'
+            },
+            {
+                zone: 'white-harbor',
+                order: 'MARCH'
+            }
+        ];
+
+        var starkId = getPlayerIdByHouse('stark');
+
+        chai.assert.equal(validator.canPlaceOrders(myGame, starkId, orders), true,
+            'Orders validation are not correct');
+
+        done();
+    });
+
     it('Incorrect order name (Stark)', function(done) {
         var myGame = storage.getRunningGame(p1.gameId);
         var orders = [
@@ -121,6 +142,74 @@ describe('Action validator (3 players)', function() {
             {
                 zone: 'the-shivering-sea',
                 order: 'RAID*'
+            }
+        ];
+
+        var starkId = getPlayerIdByHouse('stark');
+        chai.assert.equal(validator.canPlaceOrders(myGame, starkId, orders), false,
+            'Orders validation are not correct');
+
+        done();
+    });
+
+    it('Zone is empty (Stark)', function(done) {
+        var myGame = storage.getRunningGame(p1.gameId);
+        var orders = [
+            {
+                zone: 'winterfell',
+                order: 'MARCH*'
+            },
+            {
+                zone: 'white-harbor',
+                order: 'CROWN'
+            },
+            {
+                zone: 'castle-black',
+                order: 'RAID'
+            }
+        ];
+
+        var starkId = getPlayerIdByHouse('stark');
+        chai.assert.equal(validator.canPlaceOrders(myGame, starkId, orders), false,
+            'Orders validation are not correct');
+
+        done();
+    });
+
+    it('Zone belongs to other player (Stark)', function(done) {
+        var myGame = storage.getRunningGame(p1.gameId);
+        var orders = [
+            {
+                zone: 'winterfell',
+                order: 'MARCH*'
+            },
+            {
+                zone: 'white-harbor',
+                order: 'CROWN'
+            },
+            {
+                zone: 'dragonstone',
+                order: 'RAID'
+            }
+        ];
+
+        var starkId = getPlayerIdByHouse('stark');
+        chai.assert.equal(validator.canPlaceOrders(myGame, starkId, orders), false,
+            'Orders validation are not correct');
+
+        done();
+    });
+
+    it('Two orders in same zone (Stark)', function(done) {
+        var myGame = storage.getRunningGame(p1.gameId);
+        var orders = [
+            {
+                zone: 'winterfell',
+                order: 'MARCH*'
+            },
+            {
+                zone: 'winterfell',
+                order: 'CROWN'
             }
         ];
 
