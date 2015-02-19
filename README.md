@@ -61,15 +61,13 @@ player-id: <player_id>
 ```
 Body:
 ```
-{
-  "orders": [
-    {
-      "zone": "<zone_id>",
-      "order": "<order_id>"
-    }
+[
+  {
+    "zone": "<zone_id>",
+    "order": "<order_id>"
+  }
 (...)
-  ]
-}
+]
 ```
 Response example:
 ```

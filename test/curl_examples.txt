@@ -1,0 +1,46 @@
+> curl -i -X POST http://localhost:10429/games -H "content-type: application/json" -d '{"maxPlayers": "3"}'
+HTTP/1.1 202 Accepted
+
+{"gameId":"e78e0a5a-a4e3-4353-ba52-b5f7f4e8fcd6","playerId":"c89604a9-705b-459b-997a-deebbbf31298","playerHouse":"baratheon","pendingPlayers":2}
+
+
+> curl -i -X POST http://localhost:10429/games -H "content-type: application/json" -d '{"maxPlayers": "3"}'
+HTTP/1.1 202 Accepted
+
+{"gameId":"e78e0a5a-a4e3-4353-ba52-b5f7f4e8fcd6","playerId":"3ee8d01f-d62a-4af2-93ec-59e2a9d8f943","playerHouse":"stark","pendingPlayers":1}
+
+
+> curl -i -X POST http://localhost:10429/games -H "content-type: application/json" -d '{"maxPlayers": "3"}'
+HTTP/1.1 202 Accepted
+
+{"gameId":"e78e0a5a-a4e3-4353-ba52-b5f7f4e8fcd6","playerId":"f2dd9ea6-a2d4-4c9c-b00b-4183e2a83198","playerHouse":"lannister","pendingPlayers":0}
+
+> GAME_ID=e78e0a5a-a4e3-4353-ba52-b5f7f4e8fcd6
+> STARK_ID=3ee8d01f-d62a-4af2-93ec-59e2a9d8f943
+> LANNISTER_ID=f2dd9ea6-a2d4-4c9c-b00b-4183e2a83198
+> BARATHEON_ID=c89604a9-705b-459b-997a-deebbbf31298
+
+> curl -i -X GET -H "player-id: $STARK_ID" -H "content-type: application/json" http://localhost:10429/games/$GAME_ID
+HTTP/1.1 200 OK
+
+{"playerHouse":"stark","status":"running","turn":1,"phase":"PLANIFICATION","nextPlayer":["baratheon","lannister","stark"]}
+
+
+> curl -i -X PUT -H "player-id: $STARK_ID" -H "content-type: application/json" http://localhost:10429/games/$GAME_ID/orders -d '[{"zone": "winterfell", "order":"MARCH*"}]'
+HTTP/1.1 202 Accepted
+[{"zone":"winterfell","order":"MARCH*"}]
+
+
+> curl -i -X PUT -H "player-id: $LANNISTER_ID" -H "content-type: application/json" http://localhost:10429/games/$GAME_ID/orders -d '[{"zone": "lannisport", "order":"MARCH*"},{"zone":"stoney-sept","order":"MARCH"}]'
+HTTP/1.1 202 Accepted
+
+[{"zone":"lannisport","order":"MARCH*"},{"zone":"stoney-sept","order":"MARCH"}]
+
+
+> curl -i -X PUT -H "player-id: $BARATHEON_ID" -H "content-type: application/json" http://localhost:10429/games/$GAME_ID/orders -d '[{"zone": "dragonstone", "order":"MARCH*"},{"zone":"shipbreaker-bay","order":"MARCH"}]'
+HTTP/1.1 202 Accepted
+
+[{"zone": "dragonstone", "order":"MARCH*"},{"zone":"shipbreaker-bay","order":"MARCH"}]
+
+
+> curl -i -X POST -H "player-id: $LANNISTER_ID" -H "content-type: application/json" http://localhost:10429/games/$GAME_ID/crow/order -d '{"zone": "lannisport", "order":"CROWN*"}'

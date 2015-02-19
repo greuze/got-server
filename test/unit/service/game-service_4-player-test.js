@@ -110,9 +110,7 @@ describe('Period game is correct (4 players)', function() {
         checkPeriod(myGame.period, 1, 'PLANIFICATION', 4, true);
 
         myGame.nextPeriod();
-        checkPeriod(myGame.period, 1, 'SHOW_ORDERS', 0, false);
-
-        myGame.nextPeriod();
+        // SHOW_ORDERS is automatic
         checkPeriod(myGame.period, 1, 'USE_CROW', 1, false);
 
         myGame.nextPeriod();
@@ -125,12 +123,7 @@ describe('Period game is correct (4 players)', function() {
         checkPeriod(myGame.period, 1, 'EXECUTE_CROWN_ORDERS', 4, false);
 
         myGame.nextPeriod();
-        checkPeriod(myGame.period, 1, 'FINISH_TURN', 0, false);
-
-        myGame.nextPeriod();
-        checkPeriod(myGame.period, 2, 'DRAW_WESTEROS_CARDS', 0, false);
-
-        myGame.nextPeriod();
+        // FINISH_TURN and DRAW_WESTEROS_CARDS are automatic
         checkPeriod(myGame.period, 2, 'WILDLINGS_ATTACK', 4, false);
 
         myGame.nextPeriod();
