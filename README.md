@@ -55,6 +55,36 @@ HTTP/1.1 200 OK
 ```
 PUT /games/<game_id>/orders
 ```
+Headers:
+```
+player-id: <player_id>
+```
+Body:
+```
+{
+  "orders": [
+    {
+      "zone": "<zone_id>",
+      "order": "<order_id>"
+    }
+(...)
+  ]
+}
+```
+Response example:
+```
+HTTP/1.1 202 Accepted
+[
+  {
+    "zone": "lannisport",
+    "order":"RAID*"
+  },
+  {
+    "zone": "stoney-sept",
+    "order": "MARCH"
+  }
+]
+```
 
 ### Execute order
 ```
