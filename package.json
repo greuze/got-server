@@ -29,7 +29,8 @@
         "morgan": "^1.5.1",
         "body-parser": "^1.10",
         "response-time": "^2.2",
-        "node-uuid": "^1.4"
+        "node-uuid": "^1.4",
+        "async": "^0.9"
     },
     "devDependencies": {
         "grunt-contrib-jshint": "~0.6.4",
@@ -49,7 +50,8 @@
         "proxyquire": "0.5.1",
         "grunt-mkdir": "~0.1.1",
         "grunt-contrib-clean": "~0.5.0",
-        "grunt-githooks": "~0.3.1"
+        "grunt-githooks": "~0.3.1",
+        "request": "^2.53"
     },
     "keywords": []
 }
