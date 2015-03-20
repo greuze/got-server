@@ -104,9 +104,66 @@ PUT /games/<game_id>/order/<order_id>/card
 PUT /games/<game_id>/muster
 ```
 
-### Use crow
+### Use crow (replace order)
 ```
-POST /games/<game_id>/crow
+POST /games/<game_id>/crow/order
+```
+Headers:
+```
+player-id: <player_id>
+```
+Body:
+```
+{
+  "zone": "<zone_id>",
+  "order": "<order_id>"
+}
+```
+Response example:
+```
+HTTP/1.1 202 Accepted
+{
+  "zone": "stoney-sept",
+  "order": "RAID"
+}
+```
+
+### Use crow (get wildlings deck top)
+```
+GET /games/<game_id>/crow/wildlings
+```
+Headers:
+```
+player-id: <player_id>
+```
+Response example:
+```
+HTTP/1.1 200 OK
+{
+  "name": "Mammoth Riders",
+  "lowestOnDefeat": "Destroys 3 of his units anywhere.",
+  "othersOnDefeat": "Destroys 2 of their units anywhere.",
+  "highestOnVictory": "May retrieve 1 House card of his choice from his House card discard pile."
+}
+```
+
+### Use crow (skip wildlings deck top)
+```
+POST /games/<game_id>/crow/wildlings
+```
+Headers:
+```
+player-id: <player_id>
+```
+Body:
+```
+{
+  "skip": "true"|"false"
+}
+```
+Response example:
+```
+HTTP/1.1 202 Accepted
 ```
 
 ### Bet

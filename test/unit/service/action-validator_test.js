@@ -351,4 +351,45 @@ describe('Action validator (3 players)', function() {
 
         done();
     });
+
+    it('Non-crow cannot see wildlings deck top (Stark)', function(done) {
+        var myGame = storage.getRunningGame(p1.gameId);
+        var starkId = getPlayerIdByHouse('stark');
+
+        chai.assert.equal(validator.canGetWildlingsTop(myGame, starkId), false,
+            'Get wildlings top is not correct');
+
+        done();
+    });
+
+    it('Crow can see wildlings deck top (Lannister)', function(done) {
+        var myGame = storage.getRunningGame(p1.gameId);
+        var lannisterId = getPlayerIdByHouse('lannister');
+
+        chai.assert.equal(validator.canGetWildlingsTop(myGame, lannisterId), true,
+            'Get wildlings top is not correct');
+
+        done();
+    });
+
+    it('Crow cannot replace orders after seeing wildlings deck top (Lannister)', function(done) {
+        var myGame = storage.getRunningGame(p1.gameId);
+        var lannisterId = getPlayerIdByHouse('lannister');
+
+        action.getWildlingsTop(myGame);
+
+        var order1 = {
+            zone: 'stoney-sept',
+            order: 'RAID'
+        };
+        chai.assert.equal(validator.canReplaceOrder(myGame, lannisterId, order1), false,
+            'Orders replace is not correct');
+        // Can resee wildlings top
+        chai.assert.equal(validator.canGetWildlingsTop(myGame, lannisterId), true,
+            'Get wildlings top is not correct');
+        chai.assert.equal(validator.canSkipWildlingsTop(myGame, lannisterId), true,
+            'Skip wildlings top is not correct');
+
+        done();
+    });
 });
